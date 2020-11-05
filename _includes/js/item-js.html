@@ -24,7 +24,7 @@
         var itemImage, itemLink;
         if (format.includes('image')) {
             itemImage= '<div class="gallery-img" data-src="' + objectLink + '"><img class="img-fluid" src="' + objectLink + '" alt="' + objectTitle + '"><p><small>Click to view full screen</small></p></div>';
-            itemLink= '<a href="' + objectLink + '" target="_blank" class="btn btn-dark" title="Object download">Download Image</a>';
+            itemLink= '<a href="' + objectLink + '" target="_blank" class="btn btn-dark" title="Object download">Download Image</a> <a href="{{ "/draw.html" | relative_url }}?id=' + queryString + '" class="btn btn-dark">Open Editor</a>';
         } else if (format.includes('application')) {
             itemImage= '<object data="' + objectLink + '" type="application/pdf" width="100%" height="450px"><p>The PDF is not rendering in your browser. Please use the button below to download the PDF.</p></object>';
             itemLink= '<a href="' + objectLink + '" target="_blank" class="btn btn-dark" title="Object download">Download PDF</a>';
